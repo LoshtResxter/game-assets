@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rocket Bot Royale Clone</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="topbar__left">
+        <img class="logo" src="images/ui2/logostroke.png" alt="Rocket Bot Royale" />
+        <div class="profile">
+          <div class="profile__badge">1</div>
+          <div class="profile__info">
+            <div class="profile__name">Guest2665</div>
+            <div class="profile__xp">
+              <span>0 / 50</span>
+              <span class="xp-pill">XP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="topbar__nav">
+        <button class="nav-btn">Leaders</button>
+        <button class="nav-btn">XP Goals</button>
+        <button class="nav-btn nav-btn--primary">Battle</button>
+        <button class="nav-btn">Skins</button>
+        <button class="nav-btn">Friends</button>
+      </nav>
+      <div class="topbar__right">
+        <div class="currency">
+          <img src="images/shop/coins_3.png" alt="coins" />
+          <span>500</span>
+        </div>
+        <div class="currency">
+          <img src="images/shop/gems3.png" alt="gems" />
+          <span>50</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <div class="season-card">
+          <div class="season-title">SEASON 51</div>
+          <div class="season-timer">
+            <span>day</span><strong>24</strong>
+            <span>hour</span><strong>04</strong>
+            <span>min</span><strong>24</strong>
+            <span>sec</span><strong>36</strong>
+          </div>
+          <div class="season-progress">
+            <div class="season-progress__bar">
+              <div class="season-progress__fill"></div>
+            </div>
+            <div class="season-rewards">
+              <div class="reward">100</div>
+              <div class="reward">300</div>
+              <div class="reward">500</div>
+              <div class="reward">700</div>
+              <div class="reward">15000</div>
+              <div class="reward">20000</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-row">
+          <div class="cta-card">
+            <div class="cta-card__title">UNLOCK SEASON PASS</div>
+            <div class="cta-card__subtitle">GEMS & MORE!</div>
+            <img src="images/shop/gems5.png" alt="gems" />
+          </div>
+          <div class="cta-card">
+            <div class="cta-card__title">JOIN US</div>
+            <div class="cta-card__subtitle">ON DISCORD!</div>
+            <img src="images/ui_nonspritesheet/rocket_bot_icon180.png" alt="discord" />
+          </div>
+          <div class="cta-card">
+            <div class="cta-card__title">DAILY DEAL</div>
+            <div class="cta-card__subtitle">+100</div>
+            <img src="images/shop/coins-bag.png" alt="coins bag" />
+          </div>
+        </div>
+
+        <div class="mode-row">
+          <button class="mode-card mode-card--blue" data-mode="solo">
+            <div class="mode-title">PLAY SOLO</div>
+            <div class="mode-subtitle">(35 Players)</div>
+            <div class="mode-action">BATTLE ROYALE</div>
+          </button>
+          <button class="mode-card mode-card--yellow" data-mode="ranked">
+            <div class="mode-title">RANKED DUOS</div>
+            <div class="mode-subtitle">(12 Teams of 2)</div>
+            <div class="mode-action">TROPHIES LEADERBOARD</div>
+          </button>
+          <button class="mode-card mode-card--red" data-mode="mine">
+            <div class="mode-title">MINE MAYHEM</div>
+            <div class="mode-subtitle">NEW MODE</div>
+            <div class="mode-action">MINES MINES MINES</div>
+          </button>
+          <button class="mode-card mode-card--purple" data-mode="custom">
+            <div class="mode-title">CUSTOM MATCH</div>
+            <div class="mode-subtitle">PRIVATE LOBBY</div>
+            <div class="mode-action">FRIENDS ONLY</div>
+          </button>
+        </div>
+      </section>
+
+      <section class="panel-grid">
+        <article class="panel">
+          <header class="panel__header">
+            <h2>Armory Loadout</h2>
+            <button class="panel__button" id="open-armory">Open Armory</button>
+          </header>
+          <div class="panel__body" id="loadout-summary">
+            <div class="loadout">
+              <div>
+                <h3>Energy</h3>
+                <p class="energy">10 / 10</p>
+              </div>
+              <div>
+                <h3>Perks</h3>
+                <p class="muted">Select up to 3 perks.</p>
+              </div>
+              <div>
+                <h3>Weapons</h3>
+                <p class="muted">Select up to 3 weapons.</p>
+              </div>
+            </div>
+            <div class="selected" id="selected-items"></div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <header class="panel__header">
+            <h2>Online Multiplayer Status</h2>
+            <button class="panel__button" id="simulate-lobby">Simulate Lobby</button>
+          </header>
+          <div class="panel__body">
+            <div class="lobby">
+              <div>
+                <h3>Players Online</h3>
+                <p id="players-online">7,775</p>
+              </div>
+              <div>
+                <h3>Lobby</h3>
+                <p id="lobby-status">Waiting for match to start...</p>
+              </div>
+              <div>
+                <h3>AI Bots</h3>
+                <p id="ai-status">Neural bot squad: ready</p>
+              </div>
+            </div>
+            <div class="match-log" id="match-log"></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel" id="wiki">
+        <header class="panel__header">
+          <h2>Rocket Bot Royale Wiki Snapshot</h2>
+          <div class="panel__tag">Community-ready documentation</div>
+        </header>
+        <div class="panel__body">
+          <p>
+            Hello, Welcome to the Rocket Bot Royale Wiki! A place where everyone with a Fandom account can contribute and share
+            information about Rocket Bot Royale. Please read the Community Page, Rules, and Manual of Style before editing.
+          </p>
+          <div class="wiki-grid">
+            <div>
+              <h3>Rules & Guidelines</h3>
+              <ul class="rules-list">
+                <li>Be nice and respectful. No harassment, slurs, strong language, or spam.</li>
+                <li>Only game screenshots, game assets, official work from Winterpixel Games, or fan art are accepted.</li>
+                <li>No NSFW or off-topic content, hacks, leaks, or unconfirmed rumors.</li>
+                <li>Do not vandalize, impersonate staff, or distribute false information.</li>
+                <li>All edits must follow the Manual of Style and Page Layout Guides.</li>
+              </ul>
+            </div>
+            <div class="wiki-card">
+              <h3>Quick Access</h3>
+              <div class="quick-access">
+                <div class="quick-item">Game</div>
+                <div class="quick-item">Modes</div>
+                <div class="quick-item">Maps</div>
+                <div class="quick-item">Weapons</div>
+                <div class="quick-item">Perks</div>
+                <div class="quick-item">Goals</div>
+                <div class="quick-item">Tanks</div>
+                <div class="quick-item">Parachutes</div>
+                <div class="quick-item">Trails</div>
+              </div>
+            </div>
+          </div>
+          <div class="data-grid">
+            <div>
+              <h3>Weapons (Season 33)</h3>
+              <div class="table" id="weapons-table"></div>
+            </div>
+            <div>
+              <h3>Perks (Season 33)</h3>
+              <div class="table" id="perks-table"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <header class="panel__header">
+          <h2>Match Preview</h2>
+          <div class="panel__tag">Winter map extract</div>
+        </header>
+        <div class="panel__body">
+          <div class="map-preview">
+            <img src="images/home/terrain-bg.png" alt="Winter map" />
+            <div class="map-overlay">
+              <div class="countdown">MATCH STARTS IN <strong>2</strong></div>
+              <div class="player-tag">Guest2665</div>
+              <div class="ammo">
+                <img src="images/ui_nonspritesheet/drag-icon-missile.png" alt="missile" />
+                <img src="images/ui_nonspritesheet/drag-icon-missile.png" alt="missile" />
+                <img src="images/ui_nonspritesheet/drag-icon-missile.png" alt="missile" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <img src="images/winterpixel/wp_icon_64.png" alt="Winterpixel" />
+        <span>Rocket Bot Royale Wiki is a Fandom Games Community.</span>
+      </div>
+      <div>
+        <button class="auth-btn">Log In</button>
+        <button class="auth-btn">Sign Up</button>
+      </div>
+    </footer>
+  </div>
+
+  <div class="modal" id="armory-modal" aria-hidden="true">
+    <div class="modal__content">
+      <div class="modal__header">
+        <div>
+          <h2>ARMORY</h2>
+          <p>Use ENERGY to power up your tank. ENERGY recharges after every match.</p>
+        </div>
+        <button class="close-btn" id="close-armory">✕</button>
+      </div>
+      <div class="modal__body">
+        <div class="armory-grid" id="armory-grid"></div>
+        <aside class="armory-summary">
+          <div class="energy-display">
+            <span id="energy-left">10/10</span>
+          </div>
+          <div>
+            <h3>Perks</h3>
+            <div class="slots" id="perk-slots"></div>
+          </div>
+          <div>
+            <h3>Weapons</h3>
+            <div class="slots" id="weapon-slots"></div>
+          </div>
+          <button class="play-btn" id="confirm-loadout">PLAY!</button>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
