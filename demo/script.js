@@ -4,7 +4,7 @@ const weapons = [
     energy: 3,
     unlock: 1,
     use: "A larger and heavier rocket has about 3x blast radius upon impact and about 3x damage.",
-    icon: "images/effects/explosion3.png",
+    icon: "../images/effects/explosion3.png",
     type: "weapon",
   },
   {
@@ -12,7 +12,7 @@ const weapons = [
     energy: 2,
     unlock: 1,
     use: "A projectile that sticks to a piece of land and any opponent of the user takes damage.",
-    icon: "images/ui_nonspritesheet/drag_dot_50.png",
+    icon: "../images/ui_nonspritesheet/drag_dot_50.png",
     type: "weapon",
   },
   {
@@ -20,7 +20,7 @@ const weapons = [
     energy: 3,
     unlock: 2,
     use: "Five little rockets fired in quick succession, slightly spread out.",
-    icon: "images/ui_nonspritesheet/drag-icon-missile.png",
+    icon: "../images/ui_nonspritesheet/drag-icon-missile.png",
     type: "weapon",
   },
   {
@@ -28,7 +28,7 @@ const weapons = [
     energy: 3,
     unlock: 4,
     use: "A bubble that surrounds you and bounces opponent weapons back.",
-    icon: "images/ui_nonspritesheet/shine-128.png",
+    icon: "../images/ui_nonspritesheet/shine-128.png",
     type: "weapon",
   },
   {
@@ -36,7 +36,7 @@ const weapons = [
     energy: 3,
     unlock: 6,
     use: "Multiple quick, fast & small rockets that deal a medium amount of damage in a short range.",
-    icon: "images/effects/parts.png",
+    icon: "../images/effects/parts.png",
     type: "weapon",
   },
   {
@@ -44,7 +44,7 @@ const weapons = [
     energy: 2,
     unlock: 8,
     use: "Multiple small balls that explode after contact with either land or a tank.",
-    icon: "images/ui_nonspritesheet/drag_dot_50.png",
+    icon: "../images/ui_nonspritesheet/drag_dot_50.png",
     type: "weapon",
   },
   {
@@ -52,7 +52,7 @@ const weapons = [
     energy: 2,
     unlock: 10,
     use: "Cuts through land for a certain distance then opens up a hole.",
-    icon: "images/ui_nonspritesheet/drag-to-aim-dot.png",
+    icon: "../images/ui_nonspritesheet/drag-to-aim-dot.png",
     type: "weapon",
   },
   {
@@ -60,7 +60,7 @@ const weapons = [
     energy: 3,
     unlock: 12,
     use: "Tracks opponents when reaching the required distance and speeds up after acquiring its target.",
-    icon: "images/ui_nonspritesheet/drag-to-aim-lg.png",
+    icon: "../images/ui_nonspritesheet/drag-to-aim-lg.png",
     type: "weapon",
   },
   {
@@ -68,7 +68,7 @@ const weapons = [
     energy: 2,
     unlock: 16,
     use: "A tornado-shaped weapon that can blow people in the direction it is pointing.",
-    icon: "images/effects/smoke.png",
+    icon: "../images/effects/smoke.png",
     type: "weapon",
   },
   {
@@ -76,7 +76,7 @@ const weapons = [
     energy: 2,
     unlock: 18,
     use: "Launches the user in the opposite direction for about a second and a half.",
-    icon: "images/ui_nonspritesheet/drag-to-aim.png",
+    icon: "../images/ui_nonspritesheet/drag-to-aim.png",
     type: "weapon",
   },
   {
@@ -84,7 +84,7 @@ const weapons = [
     energy: 2,
     unlock: 22,
     use: "A green bottle that opens into a large-radius green circle damaging anyone inside.",
-    icon: "images/smoke_bottle.png",
+    icon: "../images/smoke_bottle.png",
     type: "weapon",
   },
   {
@@ -92,7 +92,7 @@ const weapons = [
     energy: 3,
     unlock: 24,
     use: "Instant long-ranged laser with a 2-second charge-up time.",
-    icon: "images/ui/preview_laser.png",
+    icon: "../images/ui/preview_laser.png",
     type: "weapon",
   },
   {
@@ -100,7 +100,7 @@ const weapons = [
     energy: 2,
     unlock: 26,
     use: "A thick cloud of smoke that obscures vision for 5.6 seconds.",
-    icon: "images/effects/smoke.png",
+    icon: "../images/effects/smoke.png",
     type: "weapon",
   },
 ];
@@ -111,7 +111,7 @@ const perks = [
     energy: 2,
     unlock: 1,
     use: "For each perk, the user's HP increases by 20%.",
-    icon: "images/shop/plus.png",
+    icon: "../images/shop/plus.png",
     type: "perk",
   },
   {
@@ -119,7 +119,7 @@ const perks = [
     energy: 3,
     unlock: 14,
     use: "Increases the tank's driving speed by 30%.",
-    icon: "images/shop/arrow_1.png",
+    icon: "../images/shop/arrow_1.png",
     type: "perk",
   },
   {
@@ -127,7 +127,7 @@ const perks = [
     energy: 3,
     unlock: 20,
     use: "Allows the user to see what weapons an opponent has.",
-    icon: "images/ui_nonspritesheet/tutorial-2mouse.png",
+    icon: "../images/ui_nonspritesheet/tutorial-2mouse.png",
     type: "perk",
   },
   {
@@ -135,7 +135,7 @@ const perks = [
     energy: 3,
     unlock: 28,
     use: "Pulls in nearby coins and crates for the entire match.",
-    icon: "images/shop/coins_3.png",
+    icon: "../images/shop/coins_3.png",
     type: "perk",
   },
   {
@@ -143,7 +143,7 @@ const perks = [
     energy: 8,
     unlock: 30,
     use: "Adds healing to your shield for anyone inside of it.",
-    icon: "images/ui_nonspritesheet/shine-128.png",
+    icon: "../images/ui_nonspritesheet/shine-128.png",
     type: "perk",
   },
   {
@@ -151,7 +151,7 @@ const perks = [
     energy: 5,
     unlock: 32,
     use: "Damaging another player adds 50% of the damage to your health.",
-    icon: "images/effects/explosion2.png",
+    icon: "../images/effects/explosion2.png",
     type: "perk",
   },
   {
@@ -159,7 +159,7 @@ const perks = [
     energy: 10,
     unlock: 50,
     use: "Gives a fourth rocket throughout the entire match.",
-    icon: "images/ui/ammo/ammo-laser-base.png",
+    icon: "../images/ui/ammo/ammo-laser-base.png",
     type: "perk",
   },
 ];

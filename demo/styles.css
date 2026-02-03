@@ -142,7 +142,7 @@ body {
 
 .hero {
   background: linear-gradient(180deg, rgba(48, 83, 170, 0.85), rgba(30, 52, 110, 0.7)),
-    url("images/home/terrain-bg.png");
+    url("../images/home/terrain-bg.png");
   background-size: cover;
   border-radius: 30px;
   padding: 32px;
